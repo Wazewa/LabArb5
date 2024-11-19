@@ -1,0 +1,51 @@
+.header {
+    font-size: 250%;
+    display: flex;
+    text-align: right;
+    margin: 50px;
+    flex-direction: column;
+    width: 1200px;
+    height: 100px;
+    background-color:aquamarine;
+    padding: 90px;
+    border-radius: 20px;
+}
+body {
+    background-color: lightskyblue;
+}
+.table {
+    text-align: left;
+    margin: 50px;
+    font-size: 250%;
+    width: 1370px;
+    height: 100px;
+}
+table, tr, td {
+    border: 3px solid black;
+    padding: 25px;
+    border-collapse: collapse;
+}
+.Zag {
+    background-color:rgb(38, 38, 41);
+}
+.P1 {
+    background-color:rgb(99, 44, 44);
+}
+.P2 {
+    background-color:rgb(47, 173, 62);
+}
+.P3 {
+    background-color:rgb(165, 151, 48);
+}
+.P4 {
+    background-color:rgb(98, 44, 99);
+}
+.P5 {
+    background-color:rgb(44, 44, 99);
+}
+.nameOfTable {
+    background-color:rgb(200, 200, 208);
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+

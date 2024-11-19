@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    <head>
+        <title> 
+            Лабораторная работа №5
+        </title>
+        <link href="table.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class = "header">
+            <a href = "LabArb5.html">
+                Основная страница
+            </a>
+            <a href = "page2.html">
+                Позиционирование элементов
+            </a>
+            <a href = "table.html">
+                Таблица
+            </a>
+        </div>
+        
+        <div class = "table">
+            <table>
+                <caption class = "nameOfTable"> Товарищи </caption>
+                <tr class = "Zag">
+                    <td> ФИО </td>
+                    <td> Номер группы </td>
+                    <td> Дата рождения </td>
+                    <td> Наличие водительского удостоверения </td>
+                    <td> Роль в университете </td>
+                </tr>
+                <tr class = "P1">
+                    <td> Королев И.М. </td>
+                    <td> 6206-090301D </td>
+                    <td> 02.01.2006 </td>
+                    <td> Имеется </td>
+                    <td> Студент </td>
+                </tr>
+                <tr class = "P2">
+                    <td> Веселкин М.С. </td>
+                    <td> 6206-090301D </td>
+                    <td> 8.04.2005 </td>
+                    <td> Не имеется </td>
+                    <td> Студент </td>
+                </tr>
+                <tr class = "P3">
+                    <td> Селиверстов Д.П. </td>
+                    <td> 6206-090301D </td>
+                    <td> 02.06.2005 </td>
+                    <td> Имеется </td>
+                    <td> Студент, староста </td>
+                </tr>
+                <tr class = "P4">
+                    <td> Ермошкин Д.С. </td>
+                    <td> 6205-090301D </td>
+                    <td> 17.12.2004 </td>
+                    <td> Имеется </td>
+                    <td> Студент </td>
+                </tr>
+                <tr class = "P5">
+                    <td> Карашов С.С. </td>
+                    <td> 6206-090301D </td>
+                    <td> 14.10.2005 </td>
+                    <td> Не имеется </td>
+                    <td> Студент </td>
+                </tr>
+            </table>
+            <form id = "form" onsubmit="event.preventDefault(); addStudent();">
+                <label for = "FIO"> ФИО:</label> <br>
+                <input type="text" id = "FIO" name = "FIO" required> <br>
+                <label for = "group"> Группа:</label> <br>
+                <input type="text" id = "group" name = "group" required> <br>
+                <label for = "Birthday"> Дата рождения:</label> <br>
+                <input type="text" id = "Birthday" name = "Birthday" required> <br>
+                <label for = "doYouHaveDriveLic"> Водительское удостоверение:</label> <br>
+                <input type="text" id = "doYouHaveDriveLic" name = "doYouHaveDriveLic" required> <br>
+                <label for = "Role"> Роль в университете:</label> <br>
+                <input type="text" id = "Role" name = "Role" required> <br>
+                <input type="submit" value = "Добавить"> 
+            </form>
+            <script>
+            function addStudent() {
+                
+                const newRow = document.createElement("tr");
+                const fields = ["FIO", "group", "Birthday", "doYouHaveDriveLic", "Role"];
+                fields.forEach(field => {
+                    const td = document.createElement("td");
+                    td.textContent = document.getElementById(field).value;
+                    newRow.appendChild(td);
+                });
+            table.appendChild(newRow);
+            document.getElementById("form").reset();}
+            </script>
+        </div>
+</html>
